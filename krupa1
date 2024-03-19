@@ -1,0 +1,25 @@
+void evaluate() 
+{ 
+    NODE *temp; 
+    int X, Y, Z; 
+   int sum=0; 
+    if(head->link==head) 
+    { 
+ 
+      printf("ZERO POLYNOMIAL\n"); 
+    } 
+    else 
+    { 
+        printf("Enter the value of variables X,Y and Z"); 
+        scanf("%d%d%d",&X,&Y,&Z); 
+ 
+        for(temp=head->link;temp!=head;temp=temp->link) 
+        { 
+            sum+=temp->cf*pow(X,temp->px)*pow(Y,temp->py)*pow(Z,temp->pz); 
+ 
+        } 
+        printf("EVALUATION RESULT: %d",sum); 
+ 
+    } 
+ 
+}
