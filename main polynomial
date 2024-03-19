@@ -182,3 +182,42 @@ void  add_poly()
          p2=p2->link; 
        } 
 } 
+void main()
+{
+ int choice;
+ while(1)
+ {
+ printf("\n 1->Represent and Evaluate\n 2->Addition of two polynomial Eqn.\n 3->Exit\n");
+ printf("Enter Your choice\n");
+ scanf("%d",&choice);
+ switch(choice)
+ {
+ case 1:printf("Enter the polynomial Equation\n");
+ head=read(head);
+ printf("Entered Polynomial Equation is P(X,Y,Z) = ");
+ display(head);
+ evaluate();
+ break;
+ case 2:printf("Enter the First polynomial Equation\n");
+ h1=read(h1);
+ printf("Enter the Second polynomial Equation\n");
+ h2=read(h2);
+ printf("\n Entered First Polynomial Equation is POLY1(X,Y,Z) = ");
+ display(h1);
+ printf("\n Entered Second Polynomial Equation is POLY2(X,Y,Z) = ");
+ display(h2);
+
+printf("____________________________________________________________________________
+_________\n");
+ printf("Addition of Two Polynomial Equation is POLYSUM(X,Y,Z) = ");
+ h3=(NODE*)malloc(sizeof(NODE));
+ h3->link=h3;
+ add_poly();
+ display(h3);
+ break;
+ case 3:
+ exit(0);
+ default: printf("Invalid Choice\n");
+ }
+ }
+}
